@@ -123,16 +123,25 @@ function page_header($title, $no_menu=false, $is_index=false, $onload="", $js=""
 	if (!headers_sent()){
 		header("Content-type: text/html; charset='$encoding'");
 	}
-	echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n";
-	echo "<html dir='" . $_SESSION['language']->dir . "' >\n";
+	//echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n";
+	//echo "<html dir='" . $_SESSION['language']->dir . "' >\n";
+	echo "<!doctype html>\n
+<html class='no-js' lang='en' dir='" . $_SESSION['language']->dir . "'>\n";
 	echo "<head profile=\"http://www.w3.org/2005/10/profile\"><title>$title</title>";
 	echo "<meta http-equiv='Content-type' content='text/html; charset=$encoding'>";
 	echo "<link href='$path_to_root/themes/$theme/default.css' rel='stylesheet' type='text/css'> \n";
+	echo "<link href='$path_to_root/themes/$theme/new_css/foundation.css' rel='stylesheet' type='text/css'> \n";
  	echo "<link href='$path_to_root/themes/default/images/favicon.ico' rel='icon' type='image/x-icon'> \n";
 	if ($css)
 		echo '<link href="'.$css.'" rel="stylesheet" type="text/css">';
-
+	
 	send_scripts();
+
+	echo '<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="$path_to_root/themes/default/new_css/foundation.css" />
+    <script src="$path_to_root/themes/default/js/vendor/modernizr.js"></script>';
 
 	echo "</head> \n";
 	if ($onload == "")

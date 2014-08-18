@@ -18,7 +18,11 @@
 
 body {
 	font-family: Verdana, Arial, Helvetica;
-	background: #285b86;
+	
+	/*background: #285b86;*/
+	
+	background: url('../images/cream_pixels.png') repeat scroll 0% 0% transparent;
+
 	font-size: 10px;
 	margin: 5px 0 0 5px;
 	padding: 0;

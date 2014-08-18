@@ -59,14 +59,14 @@ if (!isset($path_to_root) || isset($_GET['path_to_root']) || isset($_POST['path_
 		ini_set("log_errors", "On");
 	}		
 	// Main Title
-	$app_title = "FrontAccounting";
+	$app_title = "Smart Inventory";
 
 	// Build for development purposes
 	$build_version 	= date("d.m.Y", filemtime("$path_to_root/CHANGELOG.txt"));
 
 	// Powered by
-	$power_by 		= "FrontAccounting";
-	$power_url 		= "http://frontaccounting.com";
+	$power_by 		= "Acube Innovations Private Limitted";
+	$power_url 		= "http://acube.co";
 
 	/* No check on edit conflicts. Maybe needed to be set to 1 in certains Windows Servers */
 	$no_check_edit_conflicts = 0;
@@ -116,11 +116,7 @@ if (!isset($path_to_root) || isset($_GET['path_to_root']) || isset($_POST['path_
  	// If your help wiki use translated page titles uncomment next line
  	// $old_style_help = 1; // this setting is depreciated and subject to removal in next FA versions
 	$old_style_help = 0;
-	// 	locally installed wiki module
-	// $help_base_url = $path_to_root.'/modules/wiki/index.php?n='._('Help').'.';
-	// 	context help feed from frontaccounting.com
-	// $help_base_url = 'http://frontaccounting.com/fawiki/index.php?n=Help.';
-	// 	not used
+	
 	$help_base_url = null;
 
 	/* per user data/cache directory */

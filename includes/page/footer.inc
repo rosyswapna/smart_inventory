@@ -41,6 +41,11 @@ function page_footer($no_menu=false, $is_index=false)
 		 echo "<div class='note_msg'>$sql_queries</div>";
 		div_end();
 	}
+	echo ' <script src="$path_to_root/themes/default/js/vendor/jquery.js"></script>
+    <script src="$path_to_root/themes/default/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>';
     echo "</body></html>\n";
 }
 

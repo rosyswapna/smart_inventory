@@ -33,7 +33,74 @@
 			end_page(false, true);
 		}
 
+
 		function menu_header($title, $no_menu, $is_index)
+		{
+			global $path_to_root, $help_base_url, $db_connections,$app_title;
+
+			echo '<nav class="top-bar" data-topbar>
+				    <ul class="title-area">
+				      <!-- Title Area -->
+				      <li class="name">
+				        <h1><a  href="#">'.$app_title.'</a></h1>
+				      </li>
+				      <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+				    </ul>
+				    <section class="top-bar-section">
+				      <!-- left Nav Section -->
+				      <ul class="left">
+						<li>
+						<span style="color:#fff;"></span>
+				        </li>
+				 	  </ul>
+
+				 	  <ul class="right">';
+
+				 	if (!$no_menu)
+					{
+						$applications = $_SESSION['App']->applications;
+						$local_path_to_root = $path_to_root;
+
+						foreach($applications as $app)
+						{
+		                    if ($_SESSION["wa_current_user"]->check_application_access($app))
+		                    {
+		                        $acc = access_string($app->name);
+		                        echo "<li class='divider'></li>";
+		                        echo "<li class='has-dropdown'>
+			                        <a href='$local_path_to_root/index.php?application=".$app->id."'$acc[1]>" .$acc[0] . "</a>";
+			                    $this->menu_sub_header($app->id);
+			                    echo "</li>";
+		                    }
+						}
+				 	  	
+				    }
+
+			    echo '</ul>
+					
+					 </section>
+				  </nav>';
+			
+		}
+
+		function menu_sub_header($appid)
+		{
+			include_once("includes/session.inc");
+			$app = &$_SESSION["App"];
+			if (isset($_GET['application']))
+			$app->selected_application = $_GET['application'];
+		    
+
+			echo "<ul class='dropdown'>
+		              <li><a href='#'> ".$appid."</a></li>
+		              <li class='divider'></li>
+		               <li><a href='#'>StTears</a></li>
+		              <li class='divider'></li>
+		              
+		          </ul>";
+		}
+
+		/*function menu_header($title, $no_menu, $is_index)
 		{
 			global $path_to_root, $help_base_url, $db_connections;
 			echo "<table class='callout_main' border='0' cellpadding='0' cellspacing='0'>\n";
@@ -97,6 +164,7 @@
 				."</tr></table></center>";
 			}
 		}
+		*/
 
 		function menu_footer($no_menu, $is_index)
 		{
@@ -125,18 +193,13 @@
 			if ($no_menu == false)
 			{
 				echo "<table align='center' id='footer'>\n";
-				echo "<tr>\n";
-				echo "<td align='center' class='footer'><a target='_blank' href='$power_url' tabindex='-1'><font color='#ffffff'>$app_title $version - " . _("Theme:") . " " . user_theme() . " - ".show_users_online()."</font></a></td>\n";
-				echo "</tr>\n";
-				echo "<tr>\n";
-				echo "<td align='center' class='footer'><a target='_blank' href='$power_url' tabindex='-1'><font color='#ffff00'>$power_by</font></a></td>\n";
-				echo "</tr>\n";
-				if ($allow_demo_mode==true)
-				{
+				
 					echo "<tr>\n";
-					//echo "<td><br><div align='center'><a href='http://sourceforge.net'><img src='http://sourceforge.net/sflogo.php?group_id=89967&amp;type=5' alt='SourceForge.net Logo' width='210' height='62' border='0' align='middle' /></a></div></td>\n";
+					echo "<td align='center' class='footer'><a target='_blank' href='$power_url' tabindex='-1'>
+						 <a target='_blank' href='$power_url' tabindex='-1'><font>";
+					echo "Copyright &copy; $power_by. All Rights Reserved.</font></a></td>\n";
 					echo "</tr>\n";
-				}
+				
 				echo "</table><br><br>\n";
 			}
 		}

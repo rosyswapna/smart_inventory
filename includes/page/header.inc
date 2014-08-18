@@ -127,7 +127,11 @@ function page_header($title, $no_menu=false, $is_index=false, $onload="", $js=""
 	//echo "<html dir='" . $_SESSION['language']->dir . "' >\n";
 	echo "<!doctype html>\n
 <html class='no-js' lang='en' dir='" . $_SESSION['language']->dir . "'>\n";
-	echo "<head profile=\"http://www.w3.org/2005/10/profile\"><title>$title</title>";
+	echo "<head profile=\"http://www.w3.org/2005/10/profile\">";
+	if($title)
+		echo "<title>$title</title>";
+	else
+		echo "<title>Smart Inventory</title>";
 	echo "<meta http-equiv='Content-type' content='text/html; charset=$encoding'>";
 	echo "<link href='$path_to_root/themes/$theme/default.css' rel='stylesheet' type='text/css'> \n";
 	echo "<link href='$path_to_root/themes/$theme/new_css/foundation.css' rel='stylesheet' type='text/css'> \n";

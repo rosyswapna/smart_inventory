@@ -97,9 +97,10 @@
 				  </nav>';
 
 				  
-
-				
-				echo '<h5>'.$title.'</h5>';
+				if ($no_menu)
+					echo "<br>";
+				else				
+					echo '<h5>'.$title.'</h5>';
 				
 
 

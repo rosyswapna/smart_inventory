@@ -54,7 +54,7 @@ function defaultCompany()
 	$rtl = isset($_SESSION['language']->dir) ? $_SESSION['language']->dir : "ltr";
 	$onload = !$login_timeout ? "onload='defaultCompany()'" : "";
 
-	echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n";
+	/*echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n";
 	echo "<html dir='$rtl' >\n";
 	echo "<head profile=\"http://www.w3.org/2005/10/profile\"><title>$title</title>\n";
    	echo "<meta http-equiv='Content-type' content='text/html; charset=$encoding' />\n";
@@ -68,66 +68,83 @@ function defaultCompany()
 	echo "</head>\n";
 
 	echo "<body id='loginscreen' $onload>\n";
+	*/
+	page_header('',true);
 
-	echo "<table class='titletext'><tr><td>$title</td></tr></table>\n";
+	//echo "<table class='titletext'><tr><td>$title</td></tr></table>\n";
 	
 	div_start('_page_body');
 	br();br();
-	start_form(false, false, $_SESSION['timeout']['uri'], "loginform");
-	start_table(false, "class='login'");
-	start_row();
-	echo "<td align='center' colspan=2>";
-	if (!$login_timeout) { // FA logo
-    	echo "<a target='_blank' href='$power_url'><img src='$path_to_root/themes/$def_theme/images/logo_frontaccounting.png' alt='FrontAccounting' height='50' onload='fixPNG(this)' border='0' /></a>";
-	} else { 
-		echo "<font size=5>"._('Authorization timeout')."</font>";
-	} 
-	echo "</td>\n";
-	end_row();
 
-	echo "<input type='hidden' id=ui_mode name='ui_mode' value='".$_SESSION["wa_current_user"]->ui_mode."' />\n";
-	if (!$login_timeout)
-		table_section_title(_("Version")." $version   Build $build_version - "._("Login"));
-	$value = $login_timeout ? $_SESSION['wa_current_user']->loginname : ($allow_demo_mode ? "demouser":"");
+	div_start('row');
+		div_start('medium-12 columns');
 
-	text_row(_("User name"), "user_name_entry_field", $value, 20, 30);
+			start_form(false, false, $_SESSION['timeout']['uri'], "loginform");
+			start_table(false);
+			start_row();
+			echo "<td align='center' colspan=2>";
+			if (!$login_timeout) { // FA logo
+		    	//echo "<a target='_blank' href='$power_url'><img src='$path_to_root/themes/$def_theme/images/logo_frontaccounting.png' alt='FrontAccounting' height='50' onload='fixPNG(this)' border='0' /></a>";
+		    	echo "<a target='_blank' href='$power_url'><h2>SMART INVENTORY</h2></a>";
+			} else { 
+				echo "<font size=5>"._('Authorization timeout')."</font>";
+			} 
+			echo "</td>\n";
+			end_row();
 
-	$password = $allow_demo_mode ? "password":"";
+			echo "<input type='hidden' id=ui_mode name='ui_mode' value='".$_SESSION["wa_current_user"]->ui_mode."' />\n";
+			if (!$login_timeout)
+				//table_section_title(_("Version")." $version   Build $build_version - "._("Login"));
+				table_section_title(_("Login"));
 
-	password_row(_("Password:"), 'password', $password);
+			$value = $login_timeout ? $_SESSION['wa_current_user']->loginname : ($allow_demo_mode ? "demouser":"");
 
-	if ($login_timeout) {
-		hidden('company_login_name', $_SESSION["wa_current_user"]->company);
-	} else {
-		if (isset($_SESSION['wa_current_user']->company))
-			$coy =  $_SESSION['wa_current_user']->company;
-		else
-			$coy = $def_coy;
-		if (!@$text_company_selection) {
-			echo "<tr><td>"._("Company")."</td><td><select name='company_login_name'>\n";
-			for ($i = 0; $i < count($db_connections); $i++)
-				echo "<option value=$i ".($i==$coy ? 'selected':'') .">" . $db_connections[$i]["name"] . "</option>";
-			echo "</select>\n";
-			echo "</td></tr>";
-		} else {
-//			$coy = $def_coy;
-			text_row(_("Company"), "company_login_nickname", "", 20, 50);
-		}
-		start_row();
-		label_cell($demo_text, "colspan=2 align='center' id='log_msg'");
-		end_row();
-	}; 
-	end_table(1);
-	echo "<center><input type='submit' value='&nbsp;&nbsp;"._("Login -->")."&nbsp;&nbsp;' name='SubmitUser'"
-		.($login_timeout ? '':" onclick='set_fullmode();'").(isset($blocked_msg) ? " disabled" : '')." /></center>\n";
+			text_row(_("User name"), "user_name_entry_field", $value, 20, 30);
 
-	foreach($_SESSION['timeout']['post'] as $p => $val) {
-		// add all request variables to be resend together with login data
-		if (!in_array($p, array('ui_mode', 'user_name_entry_field', 
-			'password', 'SubmitUser', 'company_login_name'))) 
-			echo "<input type='hidden' name='$p' value='$val'>";
-	}
-	end_form(1);
+			$password = $allow_demo_mode ? "password":"";
+
+			password_row(_("Password:"), 'password', $password);
+
+			if ($login_timeout) {
+				hidden('company_login_name', $_SESSION["wa_current_user"]->company);
+			} else {
+				if (isset($_SESSION['wa_current_user']->company))
+					$coy =  $_SESSION['wa_current_user']->company;
+				else
+					$coy = $def_coy;
+				if (!@$text_company_selection) {
+					echo "<tr><td>"._("Company")."</td><td><select name='company_login_name'>\n";
+					for ($i = 0; $i < count($db_connections); $i++)
+						echo "<option value=$i ".($i==$coy ? 'selected':'') .">" . $db_connections[$i]["name"] . "</option>";
+					echo "</select>\n";
+					echo "</td></tr>";
+				} else {
+		//			$coy = $def_coy;
+					text_row(_("Company"), "company_login_nickname", "", 20, 50);
+				}
+				start_row();
+				label_cell($demo_text, "colspan=2 align='center' id='log_msg'");
+				end_row();
+			}; 
+			end_table(1);
+			echo "<center><input type='submit' value='&nbsp;&nbsp;"._("Login -->")."&nbsp;&nbsp;' name='SubmitUser'"
+				.($login_timeout ? '':" onclick='set_fullmode();'").(isset($blocked_msg) ? " disabled" : '')." /></center>\n";
+
+			foreach($_SESSION['timeout']['post'] as $p => $val) {
+				// add all request variables to be resend together with login data
+				if (!in_array($p, array('ui_mode', 'user_name_entry_field', 
+					'password', 'SubmitUser', 'company_login_name'))) 
+					echo "<input type='hidden' name='$p' value='$val'>";
+			}
+			end_form(1);
+
+		div_end();
+	div_end();
+
+
+
+
+
 	$Ajax->addScript(true, "document.forms[0].password.focus();");
 
     echo "<script language='JavaScript' type='text/javascript'>
@@ -147,6 +164,8 @@ function defaultCompany()
 		$date = date("m/d/Y") . " | " . date("h.i am");
 	echo "<td class='bottomBarCell'>$date</td>\n";
 	echo "</tr></table>\n";
+
+
 	echo "<table class='footer'>\n";
 	echo "<tr>\n";
 	echo "<td><a target='_blank' href='$power_url' tabindex='-1'>$app_title $version - " . _("Theme:") . " " . $def_theme . "</a></td>\n";
@@ -155,6 +174,8 @@ function defaultCompany()
 	echo "<td><a target='_blank' href='$power_url' tabindex='-1'>$power_by</a></td>\n";
 	echo "</tr>\n";
 	echo "</table><br><br>\n";
+
+
 	echo "</body></html>\n";
 
 ?>

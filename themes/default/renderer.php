@@ -38,6 +38,8 @@
 		{
 			global $path_to_root, $help_base_url, $db_connections,$app_title;
 
+			$local_path_to_root = $path_to_root;
+
 			echo '<nav class="top-bar" data-topbar>
 				    <ul class="title-area">
 				      <!-- Title Area -->
@@ -68,36 +70,113 @@
 		                        $acc = access_string($app->name);
 		                        echo "<li class='divider'></li>";
 		                        echo "<li class='has-dropdown'>
-			                        <a href='$local_path_to_root/index.php?application=".$app->id."'$acc[1]>" .$acc[0] . "</a>";
+			                        <a href='#'$acc[1]>" .$acc[0] . "</a>";
 			                    $this->menu_sub_header($app->id);
 			                    echo "</li>";
 		                    }
 						}
 				 	  	
-				    }
+				    
+						$img = "<img src='$local_path_to_root/themes/default/images/login.gif' width='14' height='14' border='0' alt='"._('Logout')."'>&nbsp;&nbsp;";
+						echo "<li class='divider'></li>";
+				        echo "<li class='has-dropdown'>";
+				        		echo "<a href='#'>" .$img . "</a>";
+				        		echo "<ul class='dropdown'>";
+									echo "<li><a class='shortcut' href='$local_path_to_root/access/logout.php?'>" . _("Logout") . "</a></li>";
+									echo "<li><a class='shortcut' href='$path_to_root/admin/change_current_user_password.php?selected_id=" . $_SESSION["wa_current_user"]->username . "'>" . _("Change password") . "</a></li>";
+									echo "<li><a class='shortcut' href='$path_to_root/admin/display_prefs.php?'>" . _("Preferences") . "</a></li>";
 
-			    echo '</ul>
+									
+								echo "</ul>";
+						echo "</li>";
+					}
+
+			    	echo '</ul>
 					
 					 </section>
 				  </nav>';
+
+				  
+
+				
+				echo '<h5>'.$title.'</h5>';
+				
+
+
+			/*
+				echo '<div class="row" id="main_content" >';
+    			echo '<div class="medium-12 columns">';
+
+    			//content
+    			
+    			echo '<div class="row">';
+        		echo '<div class="medium-12 columns">';
+				//if (isset($content)) echo $content;
+				// if (isset($this->print_page)) echo $this->print_page;  
+
+      			echo '</div>';
+   				echo '</div>';
+			*/
+				
+    				
 			
 		}
 
 		function menu_sub_header($appid)
 		{
+			global $path_to_root;
+			$local_path_to_root = $path_to_root;
 			include_once("includes/session.inc");
 			$app = &$_SESSION["App"];
-			if (isset($_GET['application']))
-			$app->selected_application = $_GET['application'];
-		    
+			$app->selected_application = $appid;
+			if($app->get_application($appid)){
+				$selected_app = $app->get_selected_application();
+				echo "<ul class='dropdown'>";
+				foreach ($selected_app->modules as $module)
+				{
+					echo "<li class='has-dropdown'><a href='#'> ".$module->name."</a>
+							<ul class='dropdown'>";
+					foreach ($module->lappfunctions as $appfunction)
+					{
+						echo "<li>".menu_link("http://smart_inventory.local/".$appfunction->link, $appfunction->label)."</li>";
+					}
+					if (sizeof($module->rappfunctions) > 0)
+					{
+						
+						foreach ($module->rappfunctions as $appfunction)
+						{
+							echo "<li>".menu_link("http://smart_inventory.local/".$appfunction->link, $appfunction->label)."</li>";
+						}
+					}
+					echo "</ul>
+							</li>
+			              <li class='divider'></li>";
+			    }
+			    echo " </ul>";
+		    }
+		}
 
-			echo "<ul class='dropdown'>
-		              <li><a href='#'> ".$appid."</a></li>
-		              <li class='divider'></li>
-		               <li><a href='#'>StTears</a></li>
-		              <li class='divider'></li>
-		              
-		          </ul>";
+		function menu_footer($no_menu, $is_index)
+		{
+			global $version, $allow_demo_mode, $app_title, $power_url, 
+				$power_by, $path_to_root, $Pagehelp, $Ajax;
+
+			echo '<footer class="row">';
+        	echo '<div class="medium-12 columns"><hr>';
+            echo '<div class="row">';
+			echo '<div class="medium-6 columns">';
+            echo '<small><a target="_blank" href="'.$power_url.'" tabindex="-1">Copyright &copy; '.$power_by.'. All Rights Reserved.</a></small>';
+            echo '</div>';
+
+            echo '<div class="medium-6 small-12 columns">';
+            echo '<ul class="inline-list right">';
+
+            echo '</ul>';
+            echo '</div>';
+			echo '</div>';
+			echo '</div>';
+      		echo '</footer>';
+			
 		}
 
 		/*function menu_header($title, $no_menu, $is_index)
@@ -164,7 +243,7 @@
 				."</tr></table></center>";
 			}
 		}
-		*/
+		
 
 		function menu_footer($no_menu, $is_index)
 		{
@@ -203,6 +282,7 @@
 				echo "</table><br><br>\n";
 			}
 		}
+		*/
 
 		function display_applications(&$waapp)
 		{

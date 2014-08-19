@@ -17,7 +17,7 @@ function display_credit_header(&$order)
 {
 	global $Ajax, $Refs;
 
-	start_outer_table(TABLESTYLE, "width=80%");
+	start_outer_table(TABLESTYLE, "width=100%");
 	table_section(1);
 
 	$customer_error = "";

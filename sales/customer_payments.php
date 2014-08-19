@@ -328,7 +328,7 @@ start_form();
 	hidden('trans_no');
 	hidden('old_ref', $old_ref);
 
-	start_outer_table(TABLESTYLE2, "width=60%", 5);
+	start_outer_table(TABLESTYLE2, "width=100%", 5);
 
 	table_section(1);
 

@@ -235,7 +235,7 @@ if($show_dates) {
 	end_row();
 	end_table();
 
-	start_table(TABLESTYLE_NOBORDER);
+	start_table(TABLESTYLE_NOBORDER,'width="100%"');
 	start_row();
 }
 stock_items_list_cells(_("Item:"), 'SelectStockFromList', null, true, true);
@@ -317,7 +317,7 @@ if ($_POST['order_view_mode'] == 'OutstandingOnly') {
 $table =& new_db_pager('orders_tbl', $sql, $cols);
 $table->set_marker('check_overdue', _("Marked items are overdue."));
 
-$table->width = "80%";
+$table->width = "100%";
 
 display_db_pager($table);
 submit_center('Update', _("Update"), true, '', null);

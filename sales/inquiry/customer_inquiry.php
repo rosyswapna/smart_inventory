@@ -41,7 +41,7 @@ if (!@$_GET['popup'])
 if (!isset($_POST['customer_id']))
 	$_POST['customer_id'] = get_global_customer();
 
-start_table(TABLESTYLE_NOBORDER);
+start_table(TABLESTYLE_NOBORDER,'width=100%');
 start_row();
 
 if (!@$_GET['popup'])
@@ -76,7 +76,7 @@ function display_customer_summary($customer_record)
 	$pastdue1 = $past1 + 1 . "-" . $past2 . " " . _('Days');
 	$pastdue2 = _('Over') . " " . $past2 . " " . _('Days');
 
-    start_table(TABLESTYLE, "width=80%");
+    start_table(TABLESTYLE, "width=100%");
     $th = array(_("Currency"), _("Terms"), _("Current"), $nowdue,
     	$pastdue1, $pastdue2, _("Total Balance"));
     table_header($th);
@@ -243,7 +243,7 @@ if ($_POST['filterType'] == ALL_TEXT)
 $table =& new_db_pager('trans_tbl', $sql, $cols);
 $table->set_marker('check_overdue', _("Marked items are overdue."));
 
-$table->width = "85%";
+$table->width = "100%";
 
 display_db_pager($table);
 

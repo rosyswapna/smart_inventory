@@ -113,7 +113,7 @@ class BoxReports
 		$st_params = "<div id='rep_form'>".
 			"$st_params</div>";
 		
-		$st = "<table align='center' width='80%' style='border:1px solid #cccccc;'><tr valign='top'>";
+		$st = "<table align='center' width='100%' style='border:1px solid #cccccc;'><tr valign='top'>";
 		$st .= "<td width='30%'>$st_classes</td>";
 		$st .= "<td width='35%' style='border-left:1px solid #cccccc;border-right:1px solid #cccccc;padding-left:3px;'>$st_reports</td>";
 		$st .= "<td width='35%'>$st_params</td>";

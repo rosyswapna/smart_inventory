@@ -1,15 +1,5 @@
 <?php
-/**********************************************************************
-    Copyright (C) FrontAccounting, LLC.
-	Released under the terms of the GNU General Public License, GPL, 
-	as published by the Free Software Foundation, either version 3 
-	of the License, or (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
-    See the License here <http://www.gnu.org/licenses/gpl-3.0.html>.
-***********************************************************************/
-	if (!isset($path_to_root) || isset($_GET['path_to_root']) || isset($_POST['path_to_root']))
+if (!isset($path_to_root) || isset($_GET['path_to_root']) || isset($_POST['path_to_root']))
 		die(_("Restricted access"));
 	include_once($path_to_root . "/includes/ui.inc");
 	include_once($path_to_root . "/includes/page/header.inc");
@@ -54,128 +44,126 @@ function defaultCompany()
 	$rtl = isset($_SESSION['language']->dir) ? $_SESSION['language']->dir : "ltr";
 	$onload = !$login_timeout ? "onload='defaultCompany()'" : "";
 
-	/*echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n";
-	echo "<html dir='$rtl' >\n";
-	echo "<head profile=\"http://www.w3.org/2005/10/profile\"><title>$title</title>\n";
-   	echo "<meta http-equiv='Content-type' content='text/html; charset=$encoding' />\n";
-	echo "<link href='$path_to_root/themes/$def_theme/default.css' rel='stylesheet' type='text/css'> \n";
- 	echo "<link href='$path_to_root/themes/default/images/favicon.ico' rel='icon' type='image/x-icon'> \n";
-	send_scripts();
-	if (!$login_timeout)
-	{
-		echo $js;
-	}
-	echo "</head>\n";
 
-	echo "<body id='loginscreen' $onload>\n";
-	*/
+	//header
 	page_header('',true);
 
-	//echo "<table class='titletext'><tr><td>$title</td></tr></table>\n";
-	
-	div_start('_page_body');
-	br();br();
 
-	div_start('row');
-		div_start('medium-12 columns');
+	//main content start
+	echo '<div class="row" id="main_content" >';
+    	echo '<div class="medium-12 columns">';
+      		echo '<div class="row">';
+        		echo '<div class="medium-12 columns">';
+				
+        			//content  start here
+        			div_start('_page_body');
+        			echo '<h3>Login</h3>';
+					echo '<fieldset>';
+						echo '<div class="row" >';
+							echo '<div class="medium-4 columns">
+									<a target="_blank" href="$power_url"><h3>SMART INVENTORY</h3></a>
+									</div>';
+							echo '<div class="medium-8 columns">';
 
-			start_form(false, false, $_SESSION['timeout']['uri'], "loginform");
-			start_table(false);
-			start_row();
-			echo "<td align='center' colspan=2>";
-			if (!$login_timeout) { // FA logo
-		    	//echo "<a target='_blank' href='$power_url'><img src='$path_to_root/themes/$def_theme/images/logo_frontaccounting.png' alt='FrontAccounting' height='50' onload='fixPNG(this)' border='0' /></a>";
-		    	echo "<a target='_blank' href='$power_url'><h2>SMART INVENTORY</h2></a>";
-			} else { 
-				echo "<font size=5>"._('Authorization timeout')."</font>";
-			} 
-			echo "</td>\n";
-			end_row();
+								//form
+								start_form(false, false, $_SESSION['timeout']['uri'], "loginform");
+									echo "<input type='hidden' id=ui_mode name='ui_mode' value='".$_SESSION["wa_current_user"]->ui_mode."' />\n";
 
-			echo "<input type='hidden' id=ui_mode name='ui_mode' value='".$_SESSION["wa_current_user"]->ui_mode."' />\n";
-			if (!$login_timeout)
-				//table_section_title(_("Version")." $version   Build $build_version - "._("Login"));
-				table_section_title(_("Login"));
+									//message
+									if ($login_timeout) { 
+										echo '<div class="row">';
+										echo "<center><font size=4>"._('Authorization timeout')."</font></center>";
+										echo '</div>';
+									}
 
-			$value = $login_timeout ? $_SESSION['wa_current_user']->loginname : ($allow_demo_mode ? "demouser":"");
+									//login inputs
+									$value = $login_timeout ? $_SESSION['wa_current_user']->loginname : ($allow_demo_mode ? "demouser":"");
+									echo '<div class="medium-12 columns ">';
+										start_table(false,"width='80%'");
 
-			text_row(_("User name"), "user_name_entry_field", $value, 20, 30);
+											$value = $login_timeout ? $_SESSION['wa_current_user']->loginname : ($allow_demo_mode ? "demouser":"");
 
-			$password = $allow_demo_mode ? "password":"";
+											text_row(_("User name:"), "user_name_entry_field", $value, 20, 30);
 
-			password_row(_("Password:"), 'password', $password);
+											$password = $allow_demo_mode ? "password":"";
 
-			if ($login_timeout) {
-				hidden('company_login_name', $_SESSION["wa_current_user"]->company);
-			} else {
-				if (isset($_SESSION['wa_current_user']->company))
-					$coy =  $_SESSION['wa_current_user']->company;
-				else
-					$coy = $def_coy;
-				if (!@$text_company_selection) {
-					echo "<tr><td>"._("Company")."</td><td><select name='company_login_name'>\n";
-					for ($i = 0; $i < count($db_connections); $i++)
-						echo "<option value=$i ".($i==$coy ? 'selected':'') .">" . $db_connections[$i]["name"] . "</option>";
-					echo "</select>\n";
-					echo "</td></tr>";
-				} else {
-		//			$coy = $def_coy;
-					text_row(_("Company"), "company_login_nickname", "", 20, 50);
-				}
-				start_row();
-				label_cell($demo_text, "colspan=2 align='center' id='log_msg'");
-				end_row();
-			}; 
-			end_table(1);
-			echo "<center><input type='submit' value='&nbsp;&nbsp;"._("Login -->")."&nbsp;&nbsp;' name='SubmitUser'"
-				.($login_timeout ? '':" onclick='set_fullmode();'").(isset($blocked_msg) ? " disabled" : '')." /></center>\n";
+											password_row(_("Password:"), 'password', $password);
 
-			foreach($_SESSION['timeout']['post'] as $p => $val) {
-				// add all request variables to be resend together with login data
-				if (!in_array($p, array('ui_mode', 'user_name_entry_field', 
-					'password', 'SubmitUser', 'company_login_name'))) 
-					echo "<input type='hidden' name='$p' value='$val'>";
-			}
-			end_form(1);
+											if ($login_timeout) {
+												hidden('company_login_name', $_SESSION["wa_current_user"]->company);
+											} else {
+												if (isset($_SESSION['wa_current_user']->company))
+													$coy =  $_SESSION['wa_current_user']->company;
+												else
+													$coy = $def_coy;
+												if (!@$text_company_selection) {
+													echo "<tr><td class='label'>"._("Company:")."</td><td><select name='company_login_name'>\n";
+													for ($i = 0; $i < count($db_connections); $i++)
+														echo "<option value=$i ".($i==$coy ? 'selected':'') .">" . $db_connections[$i]["name"] . "</option>";
+													echo "</select>\n";
+													echo "</td></tr>";
+												} else {
+										//			$coy = $def_coy;
+													text_row(_("Company"), "company_login_nickname", "", 20, 50);
+												}
+												start_row();
+												label_cell($demo_text, "colspan=2 align='center' id='log_msg'");
+												end_row();
+											}; 
+											end_table(1);
+											echo "<center><input type='submit' value='Sign In' name='SubmitUser'"
+												.($login_timeout ? '':" onclick='set_fullmode();'").(isset($blocked_msg) ? " disabled" : '')." class='button' /></center>\n";
 
-		div_end();
-	div_end();
+											foreach($_SESSION['timeout']['post'] as $p => $val) {
+												// add all request variables to be resend together with login data
+												if (!in_array($p, array('ui_mode', 'user_name_entry_field', 
+													'password', 'SubmitUser', 'company_login_name'))) 
+													echo "<input type='hidden' name='$p' value='$val'>";
+											}
 
-
-
-
-
-	$Ajax->addScript(true, "document.forms[0].password.focus();");
-
-    echo "<script language='JavaScript' type='text/javascript'>
-    //<![CDATA[
-            <!--
-            document.forms[0].user_name_entry_field.select();
-            document.forms[0].user_name_entry_field.focus();
-            //-->
-    //]]>
-    </script>";
-    div_end();
-	echo "<table class='bottomBar'>\n";
-	echo "<tr>";
-	if (isset($_SESSION['wa_current_user'])) 
-		$date = Today() . " | " . Now();
-	else	
-		$date = date("m/d/Y") . " | " . date("h.i am");
-	echo "<td class='bottomBarCell'>$date</td>\n";
-	echo "</tr></table>\n";
+									echo '</div>';
 
 
-	echo "<table class='footer'>\n";
-	echo "<tr>\n";
-	echo "<td><a target='_blank' href='$power_url' tabindex='-1'>$app_title $version - " . _("Theme:") . " " . $def_theme . "</a></td>\n";
-	echo "</tr>\n";
-	echo "<tr>\n";
-	echo "<td><a target='_blank' href='$power_url' tabindex='-1'>$power_by</a></td>\n";
-	echo "</tr>\n";
-	echo "</table><br><br>\n";
 
 
-	echo "</body></html>\n";
+								end_form(1);
+							
+							echo '</div>';
+						echo '</div>';
+					echo '</fieldset>';
+      			echo '</div>';
+      		echo '</div>';
+      		//content ends here
+
+
+      		//footer start here
+      		if (isset($_SESSION['wa_current_user'])) 
+				$date = Today() . " | " . Now();
+			else	
+				$date = date("m/d/Y") . " | " . date("h.i am");
+
+      		echo '<footer class="row">
+			        <div class="medium-12 columns"><hr>
+			            <div class="row">
+
+			              <div class="medium-6 columns">
+			                  <small> '.$date.' &nbsp;&nbsp;&nbsp;&nbsp; Copyright &copy; Acube Innovations Private Limitted. All Rights Reserved.</small>
+			              </div>
+
+			              <div class="medium-6 small-12 columns">
+			                  <ul class="inline-list right">
+
+			                  </ul>
+			              </div>
+
+			            </div>
+			        </div>
+			      </footer>';
+			//footer ends here
+
+      	echo '</div>';
+    echo '</div>';
+    //main content end
+
 
 ?>

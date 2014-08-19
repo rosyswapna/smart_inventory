@@ -5079,3 +5079,158 @@
 [19-Aug-2014 11:39:15 UTC] 4 Domain file "../lang/C/LC_MESSAGES/C.po" not found.
 [19-Aug-2014 11:39:15 UTC] 0:admin:header.inc:156: include_once(../themes//renderer.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
 [19-Aug-2014 11:39:15 UTC] 0:admin:header.inc:156: include_once() [<a href='function.include'>function.include</a>]: Failed opening '../themes//renderer.php' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:40:16 UTC] 4 Domain file "../lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:40:16 UTC] 0:admin:header.inc:156: include_once(../themes//renderer.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:40:16 UTC] 0:admin:header.inc:156: include_once() [<a href='function.include'>function.include</a>]: Failed opening '../themes//renderer.php' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:40:23 UTC] 4 Domain file "../lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:40:23 UTC] 0:admin:header.inc:156: include_once(../themes//renderer.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:40:23 UTC] 0:admin:header.inc:156: include_once() [<a href='function.include'>function.include</a>]: Failed opening '../themes//renderer.php' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:40:30 UTC] 4 Domain file "./lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:40:30 UTC] 0:admin:frontaccounting.php:59: include_once(./themes//renderer.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:40:30 UTC] 0:admin:frontaccounting.php:59: include_once() [<a href='function.include'>function.include</a>]: Failed opening './themes//renderer.php' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:47:53 UTC] 4 Domain file "./lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:47:57 UTC] 4 Domain file "../lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:47:57 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:47:57 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:47:57 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:47:57 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:47:57 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:47:57 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:47:57 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:47:57 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:47:57 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:47:57 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:47:57 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:47:57 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:47:57 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:47:57 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:50 UTC] 4 Domain file "../lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:48:50 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:50 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:50 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:50 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:50 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:50 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:50 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:50 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:50 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:50 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:50 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:50 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:50 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:50 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:54 UTC] 4 Domain file "../lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:48:55 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:55 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:55 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:55 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:55 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:55 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:55 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:55 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:55 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:55 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:55 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:55 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:55 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:55 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:58 UTC] 4 Domain file "../../lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:48:59 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:59 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:59 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:59 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:59 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:59 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:59 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:59 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:59 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:59 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:59 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:59 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:48:59 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:48:59 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:49:02 UTC] 4 Domain file "../lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:49:05 UTC] 4 Domain file "./lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:49:09 UTC] 4 Domain file "./lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:49:09 UTC] 4 Domain file "./lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:49:09 UTC] 4 Domain file "./lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:52:44 UTC] 4 Domain file "../lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:52:44 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:52:44 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:52:44 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:52:44 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:52:44 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:52:44 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:52:44 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:52:44 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:52:44 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:52:44 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:52:44 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:52:44 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:52:44 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:52:44 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:52:57 UTC] 4 Domain file "../lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:52:57 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:52:57 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:52:57 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:52:57 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:52:57 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:52:57 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:52:57 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:52:57 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:52:57 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:52:57 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:52:57 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:52:57 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:52:57 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:52:57 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:05 UTC] 4 Domain file "../lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:53:05 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:05 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:05 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:05 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:05 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:05 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:05 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:05 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:05 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:05 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:05 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:05 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:05 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:05 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:10 UTC] 4 Domain file "../lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:53:11 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:11 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:11 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:11 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:11 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:11 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:11 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:11 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:11 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:11 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:11 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:11 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:11 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:11 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:14 UTC] 4 Domain file "../lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:53:14 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:14 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:14 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:14 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:14 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:14 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:14 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:14 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:14 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:14 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:14 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:14 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:53:14 UTC] 0:admin:renderer.php:118: include_once(includes/session.inc) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+[19-Aug-2014 11:53:14 UTC] 0:admin:renderer.php:118: include_once() [<a href='function.include'>function.include</a>]: Failed opening 'includes/session.inc' for inclusion (include_path='.;C:\php\pear')
+[19-Aug-2014 11:55:57 UTC] 4 Domain file "../lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:56:01 UTC] 4 Domain file "./lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:56:10 UTC] 4 Domain file "./lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:56:10 UTC] 4 Domain file "./lang/C/LC_MESSAGES/C.po" not found.
+[19-Aug-2014 11:56:11 UTC] 4 Domain file "./lang/C/LC_MESSAGES/C.po" not found.

@@ -44,7 +44,7 @@
 				    <ul class="title-area">
 				      <!-- Title Area -->
 				      <li class="name">
-				        <h1><a  href="#">'.$app_title.'</a></h1>
+				        <h1><a  href="'.$path_to_root.'">'.$app_title.'</a></h1>
 				      </li>
 				      <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
 				    </ul>
@@ -155,6 +155,32 @@
 			    }
 			    echo " </ul>";
 		    }
+		}
+
+		function display_dashboard()
+		{
+			page(_($help_context = ""), false, true);
+
+			//main content start
+			echo '<div class="row" id="main_content">';
+		    	echo '<div class="medium-12 columns">';
+
+		    		echo '<div class="row">';
+		    			echo "<h5>Dashboard</h5>";
+		    		echo '</div>';
+
+		    		echo '<div class="row">';
+						//content  start here
+		        		div_start('_page_body');
+		        			echo "Welcome to Smart Inventory System!";
+		        		div_end();
+		        	echo '</div>';
+
+		        echo '</div>';
+      		echo '</div>';
+
+			
+			
 		}
 
 		function menu_footer($no_menu, $is_index)
@@ -284,6 +310,8 @@
 			}
 		}
 		*/
+
+
 
 		function display_applications(&$waapp)
 		{

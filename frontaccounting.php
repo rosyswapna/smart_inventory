@@ -60,9 +60,11 @@ if (!isset($path_to_root) || isset($_GET['path_to_root']) || isset($_POST['path_
 
 			$this->init();
 			$rend = new renderer();
-			$rend->wa_header();
+			//$rend->wa_header();
 
-			$rend->display_applications($this);
+
+			//$rend->display_applications($this);
+			$rend->display_dashboard();
 
 			$rend->wa_footer();
 			$this->renderer =& $rend;
@@ -70,8 +72,11 @@ if (!isset($path_to_root) || isset($_GET['path_to_root']) || isset($_POST['path_
 		function init()
 		{
 
-			$this->menu = new menu(_("Main  Menu"));
-			$this->menu->add_item(_("Main  Menu"), "index.php");
+			//$this->menu = new menu(_("Main  Menu"));
+			//$this->menu->add_item(_("Main  Menu"), "index.php");
+			$this->menu = new menu(_("Dashboard"));
+			$this->menu->add_item(_("Dashboard"), "index.php");
+
 			$this->menu->add_item(_("Logout"), "/account/access/logout.php");
 			$this->applications = array();
 			$this->add_application(new customers_app());

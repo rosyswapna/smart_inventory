@@ -39,7 +39,7 @@ body {
   font-size: 100%; }
 
 body {
-  background: white;
+  background: url('../images/cream_pixels.png') repeat scroll 0% 0% transparent;
   color: #222222;
   padding: 0;
   margin: 0;

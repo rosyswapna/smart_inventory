@@ -20,9 +20,16 @@ add_js_file('login.js');
 include($path_to_root . "/includes/page/header.inc");
 page_header(_("Logout"), true, false, '');
 
+echo '<div class="row">';
+
 echo "<table width='100%' border='0'>
   <tr>
-	<td align='center'><img src='$path_to_root/themes/default/images/logo_frontaccounting.png' alt='FrontAccounting' width='250' height='50' onload='fixPNG(this)' /></td>
+	<td align='center'>";
+//echo "<img src='$path_to_root/themes/default/images/logo_frontaccounting.png' alt='FrontAccounting' width='250' height='50' onload='fixPNG(this)' />";
+echo '<a target="_blank" href="$power_url"><h3>SMART INVENTORY</h3></a>';
+
+
+echo "</td>
   </tr>
   <tr>
     <td>&nbsp;</td>
@@ -31,7 +38,7 @@ echo "<table width='100%' border='0'>
     <td><div align='center'><font size=2>";
 echo _("Thank you for using") . " ";
 
-echo "<strong>$app_title $version</strong>";
+echo "<strong>$app_title</strong>";
 
 echo "</font></div></td>
   </tr>
@@ -45,6 +52,8 @@ echo "</div></td>
   </tr>
 </table>
 <br>\n";
+
+echo "</div>";
 end_page(false, true);
 session_unset();
 @session_destroy();

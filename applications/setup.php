@@ -61,7 +61,7 @@ class setup_app extends application
 		$this->add_lapp_function(2, _("System &Diagnostics"),
 			"admin/system_diagnostics.php?", 'SA_SOFTWAREUPGRADE', MENU_SYSTEM);
 
-		$this->add_rapp_function(2, _("&Backup and Restore"),
+		/*$this->add_rapp_function(2, _("&Backup and Restore"),
 			"admin/backups.php?", 'SA_BACKUP', MENU_SYSTEM);
 		$this->add_rapp_function(2, _("Create/Update &Companies"),
 			"admin/create_coy.php?", 'SA_CREATECOMPANY', MENU_UPDATE);
@@ -75,6 +75,7 @@ class setup_app extends application
 			"admin/inst_chart.php?", 'SA_CREATEMODULES', MENU_UPDATE);
 		$this->add_rapp_function(2, _("Software &Upgrade"),
 			"admin/inst_upgrade.php?", 'SA_SOFTWAREUPGRADE', MENU_UPDATE);
+			*/
 
 		$this->add_extensions();
 	}

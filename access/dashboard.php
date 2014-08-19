@@ -27,7 +27,18 @@ function defaultCompany()
 	page_header(_("Dashboard"), false, false, '');
 
 	div_start('_page_body');
-	echo "Welcome";
+		echo '<div class="row" id="main_content">';
+	    	echo '<div class="medium-12 columns">';
+
+				echo '<div class="row">';
+					//content  start here
+	        		div_start('_page_body');
+	        			echo "Welcome to Smart Inventory System!";
+	        		div_end();
+	        	echo '</div>';
+
+	        echo '</div>';
+  		echo '</div>';
 	div_end();
 	end_page(false, true);
 ?>

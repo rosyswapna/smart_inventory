@@ -96,30 +96,18 @@
 					 </section>
 				  </nav>';
 
-				  
-				if ($no_menu)
+				echo '<div class="medium-12 columns">';
+				//title 
+				if ($no_menu){
 					echo "<br>";
-				else				
-					echo '<h5>'.$title.'</h5>';
-				
-
-
-			/*
-				echo '<div class="row" id="main_content" >';
-    			echo '<div class="medium-12 columns">';
-
-    			//content
-    			
-    			echo '<div class="row">';
-        		echo '<div class="medium-12 columns">';
-				//if (isset($content)) echo $content;
-				// if (isset($this->print_page)) echo $this->print_page;  
-
-      			echo '</div>';
-   				echo '</div>';
-			*/
-				
-    				
+				}
+				else{
+    				echo '<div class="row">';
+						echo '<h5>'.$title.'</h5>';
+					echo '</div>';
+				}
+				echo '<div class="row">';				
+								
 			
 		}
 
@@ -159,7 +147,9 @@
 
 		function display_dashboard()
 		{
-			page(_($help_context = ""), false, true);
+			global $path_to_root;
+			
+			/*page(_($help_context = ""), false, true);
 
 			//main content start
 			echo '<div class="row" id="main_content">';
@@ -179,7 +169,8 @@
 		        echo '</div>';
       		echo '</div>';
 
-			
+			*/
+			include($path_to_root . "/access/dashboard.php");
 			
 		}
 
@@ -188,6 +179,8 @@
 			global $version, $allow_demo_mode, $app_title, $power_url, 
 				$power_by, $path_to_root, $Pagehelp, $Ajax;
 
+			echo '</div>';
+			echo '</div>';
 			echo '<footer class="row">';
         	echo '<div class="medium-12 columns"><hr>';
             echo '<div class="row">';

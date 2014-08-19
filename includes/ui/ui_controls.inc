@@ -181,7 +181,8 @@ function hyperlink_back($center=true, $no_menu=true, $type_no=0, $trans_no=0, $f
     	echo $attach;	
     }
 	$width = ($id != 0 ? "30%" : "20%");	
-	start_table(false, "width=$width");
+	//start_table(false, "width=$width");
+	start_table(false);
 	start_row();
 	if ($no_menu)
 	{

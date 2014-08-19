@@ -259,7 +259,7 @@ function display_order_header(&$order, $editable, $date_text)
 {
 	global $Ajax, $SysPrefs;
 
-	start_outer_table(TABLESTYLE2, "width=80%");
+	start_outer_table(TABLESTYLE2, "width=100%");
 
 	table_section(1);
 	

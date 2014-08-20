@@ -268,7 +268,7 @@ if (isset($_POST['ProcessSuppPayment']))
 
 start_form();
 
-	start_outer_table(TABLESTYLE2, "width=60%", 5);
+	start_outer_table(TABLESTYLE2, "width=100%", 5);
 
 	table_section(1);
 

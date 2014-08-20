@@ -116,7 +116,7 @@ function display_po_header(&$order)
 
 	$editable = ($order->order_no == 0);
 
-	start_outer_table(TABLESTYLE2, 'width=80%');
+	start_outer_table(TABLESTYLE2, 'width=100%');
 
 	table_section(1);
     if ($editable)
@@ -228,7 +228,7 @@ function display_po_items(&$order, $editable=true)
     display_heading(_("Order Items"));
 
     div_start('items_table');
-    start_table(TABLESTYLE, "width=80%");
+    start_table(TABLESTYLE, "width=100%");
 
    	$th = array(_("Item Code"), _("Item Description"), _("Quantity"),
 		_("Received"), _("Unit"),

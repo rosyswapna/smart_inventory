@@ -42,7 +42,7 @@ start_form();
 if (!isset($_POST['supplier_id']))
 	$_POST['supplier_id'] = get_global_supplier();
 
-start_table(TABLESTYLE_NOBORDER);
+start_table(TABLESTYLE_NOBORDER,'width=100%');
 start_row();
 
 supplier_list_cells(_("Select a supplier: "), 'supplier_id', $_POST['supplier_id'], true);
@@ -147,7 +147,7 @@ if ($_POST['supplier_id'] != ALL_TEXT) {
 $table =& new_db_pager('doc_tbl', $sql, $cols);
 $table->set_marker('check_overdue', _("Marked items are overdue."));
 
-$table->width = "90%";
+$table->width = "100%";
 
 display_db_pager($table);
 

@@ -58,7 +58,7 @@ if (get_post('SearchOrders'))
 if (!@$_GET['popup'])
 	start_form();
 
-start_table(TABLESTYLE_NOBORDER);
+start_table(TABLESTYLE_NOBORDER,'width=100%');
 start_row();
 ref_cells(_("#:"), 'order_number', '',null, '', true);
 
@@ -137,7 +137,7 @@ if (get_post('StockLocation') != $all_items) {
 
 $table =& new_db_pager('orders_tbl', $sql, $cols);
 
-$table->width = "80%";
+$table->width = "100%";
 
 display_db_pager($table);
 

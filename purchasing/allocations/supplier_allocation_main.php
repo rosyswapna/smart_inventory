@@ -110,7 +110,7 @@ if (isset($_POST['customer_id'])) {
 $table =& new_db_pager('alloc_tbl', $sql, $cols);
 $table->set_marker('check_settled', _("Marked items are settled."), 'settledbg', 'settledfg');
 
-$table->width = "80%";
+$table->width = "100%";
 
 display_db_pager($table);
 

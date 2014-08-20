@@ -258,7 +258,7 @@ div.tabs a:hover {
 
 .tableheader {
 	font-weight: bold;
-	background-color: #dee7ec;
+	background: none repeat scroll 0% 0% #dee7ec;
 	color: black;
 	text-align: center;
 }

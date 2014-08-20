@@ -220,7 +220,7 @@ if (get_post('_OrderNumber_changed') || get_post('_OrderReference_changed')) // 
 if (!@$_GET['popup'])
 	start_form();
 
-start_table(TABLESTYLE_NOBORDER);
+start_table(TABLESTYLE_NOBORDER,'width=100%');
 start_row();
 ref_cells(_("#:"), 'OrderNumber', '',null, '', true);
 ref_cells(_("Ref"), 'OrderReference', '',null, '', true);

@@ -95,7 +95,7 @@ button {
 }
 
 button img, span {
-	padding: 0px 2px ;
+	/*padding: 0px 2px ;*/
 	vertical-align: middle;
 }
 
@@ -258,14 +258,16 @@ div.tabs a:hover {
 
 .tableheader {
 	font-weight: bold;
-	background: none repeat scroll 0% 0% #dee7ec;
+	/*background: none repeat scroll 0% 0% #dee7ec;*/
+	background: none repeat scroll 0% 0% #CFEDFB;
 	color: black;
 	text-align: center;
 }
 
 .tableheader2 {
 	font-weight: bold;
-	background-color: #dee7ec;
+	/*background-color: #dee7ec;*/
+	background-color: #CFEDFB;
 	color: black;
 	text-align: left;
 }
@@ -428,9 +430,14 @@ input.amount {
    text-decoration:underline;
    cursor: pointer;
 }
+.navibar table{
+	background: none;
+	border: none;
+}
 
 .navibutton[disabled], .navibutton[disabled] span {
   color:#808080;
+  background-color:transparent;
   text-decoration: none;
   cursor: auto;
 }
@@ -484,8 +491,8 @@ ul.ajaxtabs li button{
 	background-position: top; */
 	padding: 3px 8px;
 	margin: 0px;
-	border-top: 1px solid #8cacbb;
-	border-right: 1px solid #8cacbb;
+	border-top: 1px solid #008CBA;
+	border-right: 1px solid #008CBA;
 	border-bottom: none;
 	border-left: none;
 	font-weight: bold;
@@ -496,22 +503,23 @@ ul.ajaxtabs li button:hover{
 	color:#FFFFFF;
 }
 div.spaceBox{
-	background-color: #8cacbb;
+	background-color: #008CBA;
 	height:8px;
-	border-bottom: 1px solid #8cacbb;
-	border-left: 1px solid #8cacbb;
-	border-right:1px solid #8cacbb;
+	border-bottom: 1px solid #008CBA;
+	border-left: 1px solid #008CBA;
+	border-right:1px solid #008CBA;
 	margin: 0 3px 0px 3px
 }
 
 div.contentBox{
-	border: 1px solid #8cacbb;
-	margin: 0 3px 3px 3px
+	border: 1px solid #008CBA;
+	margin: 0 3px 3px 3px;
+	padding:0.785rem;
 }
 
 ul.ajaxtabs li button.current, ul.ajaxtabs li button.current:hover{
-	border-left: 1px solid #8cacbb;
-	background-color: #8cacbb;
+	border-left: 1px solid #008CBA;
+	background-color: #008CBA;
 	color:#FFFFFF;
 }
 #hints {

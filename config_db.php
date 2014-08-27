@@ -25,7 +25,7 @@ $db_connections = array (
     'name' => 'acube innovations',
     'host' => 'localhost',
     'dbuser' => 'root',
-    'dbpassword' => '',
+    'dbpassword' => 'mysql@local',
     'dbname' => 'smart_inventory',
     'tbpref' => '0_',
   ),

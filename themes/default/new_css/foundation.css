@@ -1108,7 +1108,7 @@ button, .button {
   font-size: 1rem;
   background-color: #008cba;
   border-color: #007095;
-  border-radius: 0.3123rem;
+  
   color: white;
   transition: background-color 300ms ease-out; }
   button:hover, button:focus, .button:hover, .button:focus {
@@ -1176,7 +1176,7 @@ button, .button {
     border-color: #007095;
     color: white;
     cursor: default;
-    opacity: 0.7;
+   /* opacity: 0.7;*/
     box-shadow: none; }
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
       background-color: #007095; }
@@ -3660,7 +3660,7 @@ dialog.full, .reveal-modal.full {
 
 .joyride-tip-guide p {
   margin: 0 0 1.125rem 0;
-  font-size: 0.875rem;
+  font-size: 0.785rem;
   line-height: 1.3; }
 
 .joyride-timer-indicator-wrap {
@@ -4052,7 +4052,7 @@ ul.off-canvas-list {
   height: auto;
   background: white;
   border: solid 1px #cccccc;
-  font-size: 0.875rem;
+  font-size: 0.785rem;
   z-index: 99;
   margin-top: 2px;
   margin-top: 0;
@@ -4154,7 +4154,7 @@ ul.off-canvas-list {
     height: auto;
     background: white;
     border: solid 1px #cccccc;
-    font-size: 0.875rem;
+    font-size: 0.785rem;
     z-index: 99;
     margin-top: 0;
     margin-left: 2px;
@@ -4225,7 +4225,7 @@ ul.off-canvas-list {
     height: auto;
     background: white;
     border: solid 1px #cccccc;
-    font-size: 0.875rem;
+    font-size: 0.785rem;
     z-index: 99;
     margin-top: 0;
     margin-left: 2px;
@@ -4296,7 +4296,7 @@ ul.off-canvas-list {
     height: auto;
     background: white;
     border: solid 1px #cccccc;
-    font-size: 0.875rem;
+    font-size: 0.785rem;
     z-index: 99;
     margin-top: 0;
     margin-left: 2px;
@@ -4388,7 +4388,7 @@ ul.off-canvas-list {
       right: auto;
       z-index: 98; }
   .f-dropdown li {
-    font-size: 0.875rem;
+    font-size: 0.785rem;
     cursor: pointer;
     line-height: 1.125rem;
     margin: 0; }
@@ -4409,7 +4409,7 @@ ul.off-canvas-list {
     max-height: none;
     background: white;
     border: solid 1px #cccccc;
-    font-size: 0.875rem;
+    font-size: 0.785rem;
     z-index: 99;
     margin-top: 0;
     margin-left: 2px;
@@ -4493,7 +4493,7 @@ table {
     table thead tr th,
     table thead tr td {
       padding: 0.5rem 0.625rem 0.625rem;
-      font-size: 0.875rem;
+      font-size: 0.785rem;
       font-weight: bold;
       color: #222222; }
   table tfoot {
@@ -4501,13 +4501,14 @@ table {
     table tfoot tr th,
     table tfoot tr td {
       padding: 0.5rem 0.625rem 0.625rem;
-      font-size: 0.875rem;
+      font-size: 0.785rem;
       font-weight: bold;
       color: #222222; }
   table tr th,
   table tr td {
-    padding: 0.5625rem 0.625rem;
-    font-size: 0.875rem;
+    /*padding: 0.5625rem 0.625rem;*/
+    padding: 0.2625rem 0.325rem;
+    font-size: 0.785rem;
     color: #222222;
     text-align: left; }
   table tr.even, table tr.alt, table tr:nth-of-type(even) {
@@ -4547,7 +4548,7 @@ form .row textarea.columns {
 
 /* Label Styles */
 label {
-  font-size: 0.875rem;
+  font-size: 0.785rem;
   color: #4d4d4d;
   cursor: pointer;
   display: block;
@@ -4581,7 +4582,7 @@ select::-ms-expand {
   border-style: solid;
   border-width: 1px;
   overflow: hidden;
-  font-size: 0.875rem;
+  font-size: 0.785rem;
   height: 2.3125rem;
   line-height: 2.3125rem; }
 
@@ -4668,7 +4669,7 @@ textarea {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.75);
   display: block;
-  font-size: 0.875rem;
+  font-size: 0.785rem;
   /*margin: 0 0 1rem 0;*/
    /*padding: 0.5rem;*/
   height: 1.8rem;
@@ -4802,7 +4803,7 @@ select {
   background-repeat: no-repeat;
   border: 1px solid #cccccc;
   /*padding: 0.5rem;*/
-  font-size: 0.875rem;
+  font-size: 0.785rem;
   color: rgba(0, 0, 0, 0.75);
   line-height: normal;
   border-radius: 0;

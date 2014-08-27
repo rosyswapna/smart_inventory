@@ -629,9 +629,13 @@ function date_cells($label, $name, $title = null, $check=null, $inc_days=0,
 			"$path_to_root/themes/".user_theme()."/images/cal.gif" : "$path_to_root/themes/default/images/cal.gif";
 		$post_label = "<a tabindex='-1' href=\"javascript:date_picker(document.getElementsByName('$name')[0]);\">"
 		. "	<img src='$calc_image' width='16' height='16' border='0' alt='"._('Click Here to Pick up the date')."'></a>\n";
+		$onclick = "onclick=\"javascript:date_picker(document.getElementsByName('$name')[0]);\" ";
+		$title .= "\nClick Here to Pick up the date";
 	}	
-	else
+	else{
 		$post_label = "";
+		$onclick = "";
+	}
 
 	if ($label != null)
 		label_cell($label, $params);
@@ -646,9 +650,15 @@ function date_cells($label, $name, $title = null, $check=null, $inc_days=0,
 
 	default_focus($name);
 	$size = (user_date_format()>3)?11:10; 
+
 	echo "<input type=\"text\" name=\"$name\" class=\"$class\" $aspect size=\"$size\" maxlength=\"12\" value=\"" 
 	 . $_POST[$name]. "\""
+	 .($title ? " title='$title'": '')." $onclick>";
+
+	/*echo "<input type=\"text\" name=\"$name\" class=\"$class\" $aspect size=\"$size\" maxlength=\"12\" value=\"" 
+	 . $_POST[$name]. "\""
 	 .($title ? " title='$title'": '')." > $post_label";
+	 */
 	echo "</td>\n";
 	$Ajax->addUpdate($name, $name, $_POST[$name]);
 }

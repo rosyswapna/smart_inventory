@@ -106,7 +106,8 @@
 						echo '<h5>'.$title.'</h5>';
 					echo '</div>';
 				}
-				echo '<div class="row">';				
+				echo '<div class="row">';
+					echo "<table width='100%'><tr><td>";			
 								
 			
 		}
@@ -148,28 +149,6 @@
 		function display_dashboard()
 		{
 			global $path_to_root;
-			
-			/*page(_($help_context = ""), false, true);
-
-			//main content start
-			echo '<div class="row" id="main_content">';
-		    	echo '<div class="medium-12 columns">';
-
-		    		echo '<div class="row">';
-		    			echo "<h5>Dashboard</h5>";
-		    		echo '</div>';
-
-		    		echo '<div class="row">';
-						//content  start here
-		        		div_start('_page_body');
-		        			echo "Welcome to Smart Inventory System!";
-		        		div_end();
-		        	echo '</div>';
-
-		        echo '</div>';
-      		echo '</div>';
-
-			*/
 			include($path_to_root . "/access/dashboard.php");
 			
 		}
@@ -179,7 +158,8 @@
 			global $version, $allow_demo_mode, $app_title, $power_url, 
 				$power_by, $path_to_root, $Pagehelp, $Ajax;
 
-			echo '</div>';
+			echo '</td></tr></table>';
+			echo '</div>';//end row outer
 			echo '</div>';
 			echo '<footer class="row">';
         	echo '<div class="medium-12 columns"><hr>';

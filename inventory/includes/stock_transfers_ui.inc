@@ -28,7 +28,7 @@ function display_order_header(&$order)
 {
 	global $Refs;
 
-	start_outer_table(TABLESTYLE, "width=70%");
+	start_outer_table(TABLESTYLE, "width=80%");
 
 	table_section(1);
 	

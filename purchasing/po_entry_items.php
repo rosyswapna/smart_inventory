@@ -98,13 +98,13 @@ if (isset($_GET['AddedID']))
 
 	display_notification_centered(_("Direct GRN has been entered"));
 
-	display_note(get_trans_view_str($trans_type, $trans_no, _("&View this GRN")), 0);
+	//display_note(get_trans_view_str($trans_type, $trans_no, _("&View this GRN")), 0);
 
     $clearing_act = get_company_pref('grn_clearing_act');
 	if ($clearing_act)	
 		display_note(get_gl_view_str($trans_type, $trans_no, _("View the GL Journal Entries for this Delivery")), 1);
 // not yet
-//	display_note(print_document_link($trans_no, _("&Print This GRN"), true, $trans_type), 0, 1);
+	display_note(print_document_link($trans_no, _("&Print This GRN"), true, $trans_type), 0, 1);
 
 	hyperlink_params("$path_to_root/purchasing/supplier_invoice.php",
 		_("Entry purchase &invoice for this receival"), "New=1");

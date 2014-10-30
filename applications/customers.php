@@ -34,13 +34,18 @@ class customers_app extends application
 		$this->add_lapp_function(0, _("&Invoice Against Sales Delivery"),
 			"sales/inquiry/sales_deliveries_view.php?OutstandingOnly=1", 'SA_SALESINVOICE', MENU_TRANSACTION);
 		
+		/*
 		$this->add_rapp_function(0, _("&Template Delivery"),
 			"sales/inquiry/sales_orders_view.php?DeliveryTemplates=Yes", 'SA_SALESDELIVERY', MENU_TRANSACTION);
 		$this->add_rapp_function(0, _("&Template Invoice"),
 			"sales/inquiry/sales_orders_view.php?InvoiceTemplates=Yes", 'SA_SALESINVOICE', MENU_TRANSACTION);
+
+		
 		$this->add_rapp_function(0, _("&Create and Print Recurrent Invoices"),
 			"sales/create_recurrent_invoices.php?", 'SA_SALESINVOICE', MENU_TRANSACTION);
 		$this->add_rapp_function(0, "","");
+
+		*/
 		
 
 		$this->add_rapp_function(0, _("Customer &Payments"),
@@ -76,20 +81,24 @@ class customers_app extends application
 		$this->add_module(_("Maintenance"));
 		$this->add_lapp_function(2, _("Add and Manage &Customers"),
 			"sales/manage/customers.php?", 'SA_CUSTOMER', MENU_ENTRY);
+		/*
 		$this->add_lapp_function(2, _("Customer &Branches"),
 			"sales/manage/customer_branches.php?", 'SA_CUSTOMER', MENU_ENTRY);
 		$this->add_lapp_function(2, _("Sales &Groups"),
 			"sales/manage/sales_groups.php?", 'SA_SALESGROUP', MENU_MAINTENANCE);
 		$this->add_lapp_function(2, _("Recurrent &Invoices"),
 			"sales/manage/recurrent_invoices.php?", 'SA_SRECURRENT', MENU_MAINTENANCE);
+		*/
 		$this->add_rapp_function(2, _("Sales T&ypes"),
 			"sales/manage/sales_types.php?", 'SA_SALESTYPES', MENU_MAINTENANCE);
+		/*
 		$this->add_rapp_function(2, _("Sales &Persons"),
 			"sales/manage/sales_people.php?", 'SA_SALESMAN', MENU_MAINTENANCE);
 		$this->add_rapp_function(2, _("Sales &Areas"),
 			"sales/manage/sales_areas.php?", 'SA_SALESAREA', MENU_MAINTENANCE);
 		$this->add_rapp_function(2, _("Credit &Status Setup"),
 			"sales/manage/credit_status.php?", 'SA_CRSTATUS', MENU_MAINTENANCE);
+		*/
 
 		$this->add_extensions();
 	}

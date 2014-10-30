@@ -58,7 +58,9 @@ class BoxReports
 		$display_class = $class==null ? $temp[0] : $this->ar_classes[$class];
 		$st_reports = "";
 		$st_params = "";
-		$st_classes = "<b>" . _("Report Classes:") . "</b><br>";
+		//$st_classes = "<b>" . _("Report Classes:") . "</b><br>";
+
+		$st_classes = "<table cellpadding=0 cellspacing=0 border=0 width='100%'><tr><td><b>" . _("Report Classes:") . "</b></td></tr>\n";
 
 		if (isset($_GET['Class']))
 			set_focus('class'.$_GET['Class']);
@@ -71,11 +73,12 @@ class BoxReports
 				continue; // e.g. no dimensions
 
 			$acc = access_string($name);
-			$st_classes .= "<a href='"
+			$st_classes .= "<tr><td><a href='"
 				.$_SERVER['PHP_SELF']."?Class=$class_id'"
 				." style='font-weight:". ($cur_class == $class_id ? 'bold' : 'normal')."'"
 				." class='repclass_link' id='".'class'.$class_id."'"
-				."$acc[1]>$acc[0]</a> <br>";
+				."$acc[1]>$acc[0]</a> </td></tr>";
+			
 
 			$style = $class_id==$cur_class ? '' : "style='display:none'";
 			$st_reports .= "<table class='repclass' id='TAB_" . $class_id ."' $style cellpadding=0 cellspacing=0 border=0 width='100%'><tr><td><b>" . _("Reports For Class: ") . "&nbsp;$name</b></td></tr>\n";
@@ -109,6 +112,7 @@ class BoxReports
 			}
 			$st_reports .= "</table>";
 		}
+		$st_classes .= "</table>";
 
 		$st_params = "<div id='rep_form'>".
 			"$st_params</div>";

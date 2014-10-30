@@ -44,12 +44,14 @@ if (!isset($_POST['stock_id']))
 
 if (!@$_GET['popup'])
 {
-	echo "<center> " . _("Item:"). " ";
-	echo stock_costable_items_list('stock_id', $_POST['stock_id'], false, true);
+	br();
+	start_table();
+	start_row();
+	echo stock_costable_items_list_cells(_("Item:"),'stock_id', $_POST['stock_id'], false, true);
+	end_row();
+	end_table();
 }	
-echo "<br>";
 
-echo "<hr></center>";
 
 set_global_stock_item($_POST['stock_id']);
 
